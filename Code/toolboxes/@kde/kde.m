@@ -33,7 +33,8 @@ elseif (nargin == 1)  % ugh, needed for deserialization
 
 else if (nargin > 0)
 % CONSTRUCTOR FROM RAW DATA
-  error(nargchk(2,4,nargin));
+%   error(nargchk(2,4,nargin));
+narginchk(2,4);
 
   if (isa(ks,'char')) kstype = ks; ks =1; end;
   if (size(ks,1) == 1) ks = repmat(ks,[size(points,1),1]); end;

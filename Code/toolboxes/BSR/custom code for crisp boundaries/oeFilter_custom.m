@@ -23,7 +23,8 @@ function [f] = oeFilter_custom(sigma,support,theta,deriv,hil,vis)
 %
 % modified for crisp boundaries by Phillip Isola, July 2014
 
-nargchk(1,6,nargin);
+% nargchk(1,6,nargin);
+narginchk (1,6);
 if nargin<2, support=3; end
 if nargin<3, theta=0; end
 if nargin<4, deriv=0; end
